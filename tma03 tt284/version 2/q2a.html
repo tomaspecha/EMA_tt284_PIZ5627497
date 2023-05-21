@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Setting up the meta data for the HTML document -->
+    <meta charset="UTF-8"> <!-- Character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Setting the viewport to scale to the device width and initial zoom level -->
+
+    <!-- Linking the CSS stylesheet to the HTML document -->
+    <link rel="stylesheet" href="q2b.css">
+
+    <!-- Setting the title for the HTML document -->
+    <title>Add Announcement</title>
+</head>
+<body>
+    <!-- Header section of the page -->
+    <header>
+        <!-- Main heading of the page -->
+        <h1>Add Announcement</h1>
+
+        <!-- Navigation bar -->
+        <nav>
+            <ul> <!-- Unordered list for the navigation links -->
+                <!-- Each list item represents a navigation link -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Walk Events</a></li>
+                <li><a href="#">Other Events</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">News Items</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+   <main>
+        <!-- Start of the form -->
+        <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+            <!-- Input fields for the form with associated labels -->
+            <label for="date">Date of Walk:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <!-- Hidden input field for session identifier -->
+            <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
+
+            <label for="start-time">Start time:</label>
+            <input type="text" id="start-time" name="start-time" required>
+
+            <label for="name">Name of Walk:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required>
+
+            <label for="meeting-point">Meeting point:</label>
+            <input type="text" id="meeting-point" name="meeting-point" required>
+
+            <label for="distance">Distance in miles:</label>
+            <input type="number" id="distance" name="distance" required>
+
+            <label for="walk-leader">Name of walk leader:</label>
+            <input type="text" id="walk-leader" name="walk-leader" required>
+
+            <label for="contact-number">Contact number:</label>
+            <input type="tel" id="contact-number" name="contact-number" pattern="\+\d{7,12}" title="Phone number should start with '+' and be 7 to 12 digits long" required>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" required></textarea>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="">Select status...</option>
+                <option value="proposed">Proposed</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+            <!-- Submit button for the form -->
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+
+</html>

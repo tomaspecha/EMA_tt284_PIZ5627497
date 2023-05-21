@@ -1,0 +1,209 @@
+/* 
+Setting up global styles. Arial is chosen as the font, and any margins or padding are reset to 0. The background color is set to a light green (#f3f5dc).
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f5dc;
+}
+
+/* 
+Header styling. The text is centered, and the background color is set to a light purple (#ab8ea7). The padding is set to 10px for spacing.
+*/
+header {
+    text-align: center;
+    background-color:#ab8ea7;
+    color: black;
+    padding: 10px;
+}
+
+/* 
+Removing margin for the main heading within the header to ensure there's no extra space around it.
+*/
+header h1 {
+    margin: 0;
+}
+
+/* 
+Setting text alignment for the navigation section.
+*/
+nav {
+    text-align: right;
+}
+
+/* 
+Styling for the unordered list within the navigation. Removes bullet points and padding.
+*/
+nav ul {
+    list-style:inside;
+    padding: 0;
+}
+
+/* 
+Styling for list items in navigation. They are displayed inline with a margin at the right.
+*/
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* 
+Removing the default underline from all links in the navigation and setting their color to a dark grey.
+*/
+nav ul li a {
+    text-decoration:none;
+    color: #333;
+}
+
+/* 
+Setting a 10px margin for the main content area.
+*/
+main {
+    margin: 10px;
+}
+
+/* 
+Styling for forms. The background color is set to a light blue, padding is added for spacing, and a slight box shadow and border radius are applied for a softer look.
+*/
+form {
+    background-color: #f2f5fc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+Styling for labels within forms. They are displayed as blocks with a margin below for spacing.
+*/
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 
+Styling for different input types within forms, as well as textarea and select elements. 
+They are set to occupy 80% of their parent, with padding for spacing and a margin below. 
+They also have a light border and slight border radius.
+*/
+form input[type="text"],
+form input[type="date"],
+form input[type="tel"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 
+Styling for the submit button within forms. It has a dark background color, white text, and no border. 
+It also has a border radius, padding for size, and changes the cursor to a pointer on hover for better UX.
+*/
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 
+Changing the text color to blue when a text input field is focused. 
+*/
+input[type="text"]:focus {
+    color: blue;
+}
+
+/* 
+Setting the color of placeholder text in text input fields to black.
+*/
+input[type="text"]::placeholder {
+    color: black;
+}
+
+/* 
+A media query that applies when the viewport is 375px wide or less.
+This changes the text alignment of the navigation to the center,
+and makes list items in the navigation display as blocks (vertically) 
+with a margin at the bottom for spacing.
+*/
+@media only screen and (max-width: 375px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+    /* Adjust form input fields to be 100% width on small screens */
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="tel"],
+    form input[type="number"],
+    form textarea,
+    form select {
+        width: 100%;
+    }
+
+/* CSS rules specific to viewports 667px tall or less */
+@media only screen and (max-height: 667px) {
+    /* Here, you could adjust styles for smaller viewport heights */
+    /* For example, you could reduce the vertical padding on your form */
+    form {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+/* 
+A media query that applies when the viewport is between 376px and 1024px wide.
+This keeps the text alignment of the navigation to the right,
+and keeps list items in the navigation display inline (horizontally) 
+with a margin at the right for spacing. Form inputs are also kept at 100% width.
+*/
+@media only screen and (min-width: 376px) and (max-width: 1024px) {
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="tel"],
+    form input[type="number"],
+    form textarea,
+    form select {
+        width: 100%;
+    }
+}
+
+/* 
+A media query that applies when the viewport is at least 1025px wide.
+This changes the width of the different input types within forms, as well as textarea and select elements,
+to 80% of their parent element, making them narrower on larger screens.
+*/
+@media only screen and (min-width: 1025px) {
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="tel"],
+    form input[type="number"],
+    form textarea,
+    form select {
+        width: 80%;
+    }
+}
+  
+/* CSS rules specific to viewports taller than 667px */
+@media only screen and (min-height: 668px) {
+    /* Here, you could adjust styles for larger viewport heights */
+    /* For example, you could increase the vertical padding on your form */
+    form {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+}

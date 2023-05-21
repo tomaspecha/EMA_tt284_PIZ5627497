@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="q2a.css">
+    <title>Add Announcement</title>
+</head>
+<body>
+    <header>
+      <h1>Add Announcement</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Walk Events</a></li>
+                <li><a href="#">Other Events</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">News Items</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+</header>
+    <main>
+        <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+            <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="announcement">Announcement:</label>
+            <textarea id="announcement" name="announcement" required></textarea>
+
+            <label for="sender">Sender:</label>
+            <input type="text" id="sender" name="sender" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+
+header {
+    width: 100%;
+    background-color: #52bad5;
+    border-bottom: 1px solid #2C9AB7;
+}
+
+nav {
+    float: right;
+    width: 50%;
+    text-align: right;
+    margin-right: 25px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border:2px;
+}
+/* 
+Setting the color of placeholder text in text input fields to black.
+*/
+input[type="text"]::placeholder {
+    color: black;
+}
+
+/* 
+A media query that applies when the viewport is 375px wide or less.
+This changes the text alignment of the navigation to the center,
+and makes list items in the navigation display as blocks (vertically) 
+with a margin at the bottom for spacing.
+*/
+@media only screen and (max-width: 375px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    /* Adjust form input fields to be 100% width on small screens */
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="tel"],
+    form input[type="number"],
+    form textarea,
+    form select {
+        width: 100%;
+    }
+}
+
+
+
+/* 
+A media query that applies when the viewport is at least 1024px wide.
+This changes the width of the different input types within forms, as well as textarea and select elements,
+to 80% of their parent element, making them narrower on larger screens.
+/* Media Query for large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+    main {
+        width: 1024px; /* Fixing width to 1024px for desktop view */
+        height: 768px; /* Fixing height to 768px for desktop view */
+        margin: 0 auto; /* Centers the main container */
+        overflow-y: auto; /* Add scroll bar if content exceeds the fixed height */
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="tel"],
+    form input[type="number"],
+    form textarea,
+    form select {
+        width: 80%;
+    }
+}
+
+
+/* Media query for screen heights of 768px or larger */
+@media only screen and (min-height: 768px) {
+    /*adjust styles based on viewport height.
+       However, this is less common. A possible use case might be adjusting font size or line height to better utilize the available vertical space. 
+       This is just an example and may not be necessary for your design. */
+    }
+
+/* 
+A media query that applies when the viewport is between 376px and 1023px wide.
+This keeps the text alignment of the navigation to the right,
+and keeps list items in the navigation display inline (horizontally) 
+with a margin at the right for spacing. Form inputs are also kept at 100% width.
+*/
+@media only screen and (min-width: 375px) and (max-width: 1023px) {
+ main {
+        width: 375px; /* Fixing width to 1024px for desktop view */
+        height:  667px; /* Fixing height to 768px for desktop view */
+        margin: 0 auto; /* Centers the main container */
+        overflow-y: auto; /* Add scroll bar if content exceeds the fixed height */
+    }
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="tel"],
+    form input[type="number"],
+    form textarea,
+    form select {
+        width: 100%;
+    }
+  }
+}
